@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<!--调用头部公共文件-->
+		<#include "headerFile.htm">
+		<!--调用头部结束-->
+	</head>
+
+	<body>
+		<!--调用头部导航栏-->
+		<#include "header.htm">
+		<!--调用导航栏结束-->
+		<script  type="text/javascript">
+
+	$(function(){
+
+		var timerID;
+
+		$(window).resize(function(){
+
+			$('.main,.in_bg').height($(window).height()-250);
+
+		}).resize();
+
+		$('.main').backstretch("{ms:global.host/}/{ms:global.style/}/images/banner_1.jpg",{speed: 500,fade: 750,duration: 4000});
+
+		$('.in_sevice ul').carouFredSel({
+
+	        auto: {
+
+	            timeoutDuration:4000
+
+	        },
+
+	        circular: true,
+
+	        infinite: false,
+
+	        scroll:"easeInOutCirc",
+
+	        pagination: {
+
+	            container:".in_s_page",
+
+	            anchorBuilder:function( nr ) {
+
+	                return "<a href='javascript:;'></a>";
+
+	            }
+
+	        }
+
+	    });
+
+	    $i=1;
+
+	    run();
+
+	    $('.in_prev').click(function(){
+
+	    	clearInterval(timerID);
+
+	    	$i--;
+
+	    	$i = $i <= 1 ? $i = 1 :$i ;
+
+	    	$('.main').backstretch("{ms:global.host/}/{ms:global.style/}/images/banner_"+$i+".jpg",{speed: 500,fade: 750,duration: 4000});
+
+	    	$('.backstretch').eq(0).remove();
+
+	    	run();
+
+	    });
+
+	    $('.in_next').click(function(){
+
+	    	clearInterval(timerID);
+
+	    	$i++;
+
+	    	$i = $i > 3 ? $i = 3 :$i ;
+
+	    	$('.main').backstretch("{ms:global.host/}/{ms:global.style/}/images/banner_"+$i+".jpg",{speed: 500,fade: 750,duration: 4000});
+
+	    	$('.backstretch').eq(0).remove();
+
+	    	run();
+
+	    });
+
+	    function run(){
+
+			timerID = setInterval(function(){
+
+		    	$i++;
+
+		    	$i = $i > 3 ? $i = 1 :$i ;
+
+		    	$('.main').backstretch("{ms:global.host/}/{ms:global.style/}/images/banner_"+$i+".jpg",{speed: 500,fade: 750,duration: 4000});
+
+		    	$('.backstretch').eq(0).remove();
+
+		    },8000);
+
+		}
+
+	})
+
+</script>
+<!-- <div class="main" style="height: 94px; position: fixed; z-index: 0; background: none;">
+  
+<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 219px; width: 1366px; z-index: -999998; position: absolute;"><img src="/templets/default/img/banner_2.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1366px; height: 563.484px; max-width: none; z-index: -999999; left: 0px; top: -172.242px;"></div><div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 219px; width: 1366px; z-index: -999998; position: absolute;"><img src="/templets/default/img/banner_3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1366px; height: 563.484px; max-width: none; z-index: -999999; left: 0px; top: -172.242px;"></div></div>
+<div class="in_bg" style="height: 94px;"> <a href="#" class="in_prev"></a> <a href="#" class="in_next"></a>
+  <div class="in_con container">
+    <div class="in_about">
+      <div class="title">关于我们</div>
+      <p><img src="/templets/default/img/pic3.jpg"><b style="font-size:14px;display:block;"><a href="/a/about" style="color:#FFFFFF;">织梦猫传媒互动中心</a></b>尚基国际健康管理中心是西南首家高端健康管
+        
+        理机构。中心一直都在关注着我们社会的中间
+        
+        力量—精英阶层。</p>
+    </div>
+    <div class="in_sevice">
+      <div class="caroufredsel_wrapper">
+        <div class="caroufredsel_wrapper" style="display: block; text-align: left; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 280px; height: 160px; margin: 0px; overflow: hidden;"><ul style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 1400px; height: 160px; z-index: auto;">
+        
+        
+
+
+          
+        <li><a href="/a/service/2014/1127/5.html" target="_blank"><img src="/uploads/allimg/141127/1-14112G521030-L.jpg" border="0" width="280" height="160" alt="龙脉公司抗衰老青春之旅"></a>
+            <p><a href="/a/service/2014/1127/5.html" target="_blank">龙脉公司抗衰老青春之旅</a></p>
+          </li><li><a href="/a/service/2014/1127/1.html" target="_blank"><img src="/uploads/141127/1-14112G1410OY.jpg" border="0" width="280" height="160" alt="预防癌症的检查"></a>
+            <p><a href="/a/service/2014/1127/1.html" target="_blank">预防癌症的检查</a></p>
+          </li></ul></div>
+      </div>
+      <div class="in_s_page" style="display: block;"> <a href="javascript:;" class="selected"></a><a href="javascript:;" class=""></a></div>
+    </div>
+    <div class="in_news">
+      <ul>
+        <li><a href="/a/news/2014/1127/4.html" target="_blank"><img src="/uploads/allimg/141127/1-14112G519510-L.jpg" border="0" width="52" height="52" alt="抑制靶点，抗击HIV再突破——美霍普金斯医院新"></a>
+          <p><a href="/a/news/2014/1127/4.html" target="_blank">抑制靶点，抗击…</a></p>
+          <p>从偏见到深入研究 ☆ 1959年，…</p>
+        </li>
+<li><a href="/a/news/2014/1127/3.html" target="_blank"><img src="/uploads/allimg/141127/1-14112G43A30-L.jpg" border="0" width="52" height="52" alt="从多层级到专项—新加坡深度筛查体检之旅"></a>
+          <p><a href="/a/news/2014/1127/3.html" target="_blank">从多层级到专项—…</a></p>
+          <p>为什么去新加坡？ ☆ 新加坡…</p>
+        </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</div>
+		</div>  -->
+		<div class="in_bg" style="background:url({ms:global.host/}/{ms:global.style/}/images/1464858626484.jpg) no-repeat;background-size:100% 100%;height:200px;margin-top:17px">
+<!--			<a href="#" class="in_prev"></a>
+-->			<!--<a href="#" class="in_next"></a>-->
+			<div class="in_con container">
+				{ms:arclist typeid=133}
+				<div class="in_about">
+					<div class="title">关于我们</div>
+					<p><img src="{ms:global.host/}/{ms:global.style/}/images/pic3.jpg">
+						<b style="font-size:14px;display:block;">
+						<a  href="{ms:global.url/}[field.link/]"  style="color:#FFFFFF;">[field.title/]</a>
+						</b>
+						<div style="width:250px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">[field.descrip/]</p>
+					</div>
+				</div>
+				{/ms:arclist}
+				<div class="in_sevice">
+					<div class="caroufredsel_wrapper">
+						<ul>
+							{ms:arclist size=2 orderby=id order=asc typeid=95}
+							<li>
+								<a href="{ms:global.url/}[field.link/]" target="_blank">
+									<img src='{ms:global.host/}[field.litpic/]' border='0' width='280' height='160' alt='[field.title/]'></a>
+								<p>
+									<a href="{ms:global.url/}[field.link/]" target="_blank">[field.title/]</a>
+								</p>
+							</li>
+							{/ms:arclist}
+						</ul>
+					</div>
+					<div class="in_s_page" style="display: block;">
+						<a href="javascript:;" class=""></a>
+						<a href="javascript:;" class="selected"></a>
+						<a href="javascript:;" class=""></a>
+						<a href="javascript:;" class=""></a>
+					</div>
+				</div>
+				<div class="in_news">
+					<ul>
+						{ms:arclist size=2 orderby=id order=asc typeid=68}
+						<li>
+							<a href="{ms:global.url/}[field.link/]" target="_blank">
+								<img src='{ms:global.host/}[field.litpic/]' border='0' width='52' height='52' alt='[field.title/]'></a>
+							<p>
+								<a href="{ms:global.url/}[field.link/]" target="_blank">[field.title/]</a>
+							</p>
+							</br>
+							<p style="width:120px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">[field.descrip/]</p>
+						</li>
+						{/ms:arclist}
+					</ul>
+				</div>
+			</div>
+		
+		<!--调用尾部-->
+		<#include "footer.htm">
+		<!--调用尾部结束-->
+	</body>
+
+</html>

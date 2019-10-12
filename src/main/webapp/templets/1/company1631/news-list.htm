@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--调用头部公共文件-->
+<#include "headerFile.htm">
+<!--调用头部结束-->
+</head>
+<body>
+<!--调用头部导航栏-->
+<#include "header.htm">
+<!--调用导航栏结束-->
+<script  type="text/javascript">
+
+$(function(){
+
+	$(window).resize(function(){
+
+		$('.main').height($(window).height()-250);
+
+	}).resize();
+
+	$('.main').backstretch(["{ms:global.host/}/{ms:global.style/}/images/news_bg.jpg"]);
+
+})
+
+</script>
+<!-- <div  class="main">
+		<div  class="backstretch" ></div>
+</div> -->
+<div class="in_bg">
+		<div class="container con">
+				<div class="news sub_con">
+						<div  class="title">
+						<h2 style="background:url({ms:global.host/}/{ms:global.style/}/images/news_title.jpg);color:#8DC21F;float:left; margin-top: 15px;font-family:inherit; font-size: 30px;">{ms:channel type=path}[field.typetitle/]{/ms:channel}</h2>
+						 当前位置：<a href='{ms:global.host/}'>主页</a> > <a href='{ms:channel type=path}[field.typelink/]{/ms:channel}'>{ms:channel type=path}[field.typetitle/]{/ms:channel}</a>
+						</div>
+						<ul class="newslist cl">
+						{ms:arclist size=8 orderby=id order=asc ispaging=true}
+								<li> 
+									<a class="picitem" target="_blank" href="{ms:global.url/}[field.link/]">
+									<img src="{ms:global.host/}[field.litpic/]" width="275" height="160"><em></em></a>
+									<div class="tit">
+											<h4><a href="{ms:global.url/}[field.link/]" target="_blank">[field.title/]</a></h4>
+											<span>[[field.date?string("yyyy-mm-dd")/]]</span>
+									 </div>
+									<p>[field.descrip/]</p>
+									<a href="{ms:global.url/}[field.link/]" target="_blank" class="more">+ VIEW MORE</a> 
+								</li>
+						{/ms:arclist}
+						</ul>
+				</div>
+		</div>
+		<br>
+		<br>
+		<br>
+</div>
+<!--调用尾部-->
+<#include "footer.htm">
+<!--调用尾部结束-->
+</body>
+</html>

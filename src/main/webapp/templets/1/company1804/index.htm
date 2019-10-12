@@ -1,0 +1,200 @@
+﻿<!doctype html>
+<html>
+<#include "headFile.htm">
+<body>
+	<style>
+		.slides_box div img{
+			height:475px;
+		}
+	</style>
+	<#include "head.htm">
+	<div class="blank20"></div>
+
+	<div class="section1">
+		<div class="box">
+			<div class="section1-1">
+				<script type="text/javascript" src="{ms:global.host/}/{ms:global.style/}/js/jquery.featurelist-1.0.0.js"></script>
+				<script language="javascript">
+					$(document).ready(function() {
+						$.featureList(
+							$(".slides_nav li"),
+							$(".slides_box div"), {
+								start_item	:	0
+							}
+							);
+					});
+				</script>
+				<div class="slides_box">
+					{ms:arclist typeid=59 size=5}
+						<div>
+							<a href="{ms:global.url/}[field.link/]" target="_blank">
+								<dl>
+									<dt><font style="color:;">[field.title/]</font></dt>
+									<dd>[field.descrip/]</dd>
+								</dl>
+								<img alt="" src="{ms:global.host/}[field.litpic/]" />
+							</a>
+						</div>
+					{/ms:arclist}	
+					<ul class="slides_nav">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+					</ul>
+				</div>
+				<!--slides_box end-->
+			</div>
+			<div class="section1-2">
+				<script type="text/javascript" src="{ms:global.host/}/{ms:global.style/}/js/tab.js"></script>
+				<div class="TabTitle">
+					<ul id="myTab">
+						<li class="active" onmouseover="nTabs(this,0);"><a href="{ms:global.url/}/59/index.html">今日推荐</a>
+						</li>
+						<li class="normal" onmouseover="nTabs(this,1);"><a href="{ms:global.url/}/61/index.html">最新</a>
+						</li> 	
+						<li class="normal" onmouseover="nTabs(this,2);"><a href="{ms:global.url/}/106/index.html">焦点</a>
+						</li> 	
+					</ul>
+				</div>
+				<div class="TabContent">
+					<div id="myTab_Content0">
+
+						{ms:arclist typeid=59 size=1}
+							<dl>
+								<dt><a href="{ms:global.url/}[field.link/]" style="color:;" target="_blank" ><font style="color:;">[field.title/]</font></a></dt>
+								<dd>[field.descrip/]</dd>
+							</dl>
+						{/ms:arclist}	
+						<ul class="ul1">
+						{ms:arclist typeid=59 size=7}	
+							<li><span>[[field.date?string("yyyy-mm-dd")/]</font></a></li>
+						{/ms:arclist}
+						</ul>
+					</div>
+					<div id="myTab_Content1" class="none">
+	
+						{ms:arclist typeid=61 size=1}
+							<dl>
+								<dt><a href="{ms:global.url/}[field.link/]" style="color:;" target="_blank" ><font style="color:;">[field.title/]</font></a></dt>
+								<dd>[field.descrip/]</dd>
+							</dl>
+						{/ms:arclist}	
+						<ul class="ul1">
+						{ms:arclist typeid=61 size=7}	
+							<li><span>[[field.date?string("yyyy-mm-dd")/]</font></a></li>
+						{/ms:arclist}	
+						</ul>
+					</div>
+					<div id="myTab_Content2" class="none">
+
+						{ms:arclist typeid=106 size=1}
+							<dl>
+								<dt><a href="{ms:global.url/}[field.link/]" style="color:;" target="_blank" ><font style="color:;">[field.title/]</font></a></dt>
+								<dd>[field.descrip/]</dd>
+							</dl>
+						{/ms:arclist}	
+						<ul class="ul1">
+						{ms:arclist typeid=106 size=7}	
+							<li><span>[[field.date?string("yyyy-mm-dd")/]</font></a></li>
+						{/ms:arclist}	
+						</ul>
+					</div>
+				</div>	
+				<div class="section1-2-2">
+					<p>始终保持清醒头脑，牢牢把握“坚持、巩固、深化、提高”八字方针，以锲而不舍、驰而不息的意志和毅力，以抓铁有痕、踏石留印的力度和劲道，毫不动摇打好改进作风这场攻坚战和持久战。--人民日报</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="blank20"></div>
+	<div class="section2">
+		<div class="box">
+			<div class="section2-1">
+				<div class="title10"><a href="{ms:global.url/}/59/index.html">中央精神</a>
+				</div>
+				<ul class="ul1">
+				{ms:arclist typeid=59 size=7}
+					<li><a style="color:;" href="{ms:global.url/}[field.link/]" title="[field.title/]" target="_blank"><font style="color:;">[field.title/]</font></a></li>
+				{/ms:arclist}	
+				</ul>
+			</div>
+			<div class="section2-2">
+				<div class="title10"><a href="{ms:global.url/}/59/index.html">分类指导</a>
+				</div>
+				<ul class="ul1">
+					{ms:arclist typeid=59 size=7}
+						<li><span>[field.date?string("yyyy-mm-dd")/] </font></a></li>
+					{/ms:arclist}	
+				</ul>			
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="blank20"></div>
+	<div class="section3">
+		<div class="box">
+			<div class="title10"><a href="/demo/business-template/V352/zheng-fu-gong-zuo">政府工作</a>
+			</div>
+			<div class="section3-1">
+				<div class="title11"><a href="/demo/business-template/V352/zheng-fu-jian-she">政府建设</a>
+				</div>
+				{ms:arclist typeid=59 size=1}
+				<dl>
+					<dt><a href="{ms:global.url/}[field.link/]" style="color:;" target="_blank" ><font style="color:;">[field.title/]</font></a></dt>
+					<dd>[field.descrip/]</dd>
+				</dl>
+				{/ms:arclist}	
+				<ul class="ul1">
+				{ms:arclist typeid=59 size=5}
+					<li><a style="color:;" href="{ms:global.url/}[field.link/]" title="[field.title/]" target="_blank"><font style="color:;">[field.title/]</font></a></li>
+				{/ms:arclist}	
+				</ul>		
+				<a class="more" href="{ms:global.url/}/59/index.html">更多&gt;&gt;</a>
+			</div>
+			<div class="section3-2">				
+				<div class="title11"><a href="/demo/business-template/V352/xiang-mu-jian-she">项目建设</a>
+				</div>
+				{ms:arclist typeid=59 size=1}
+				<div class="section3-2-1">
+					<a class="img-auto" href="{ms:global.url/}[field.link/]" target="_blank">
+					<img alt="[field.title/]" src="{ms:global.host/}[field.litpic/]"/></a>
+					<h5><font style="color:;">[field.title/]</font></h5>
+					<p>[field.descrip/]</p>
+				</div>
+				{/ms:arclist}	
+			</div>
+			<div class="section3-3">
+				<div class="title11"></div>
+				<ul class="ul1">
+				{ms:arclist typeid=61 size=8}
+					<li><span>[field.date?string("yyyy-mm-dd")/]</font></a></li>
+				{/ms:arclist}		
+				</ul>			
+				<a class="more" href="{ms:global.url/}/59/index.html">更多&gt;&gt;</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="blank20"></div>
+	<div class="section4">
+		<div class="box">
+			<div class="title10"><a href="/demo/business-template/V352/products">产品分类</a>
+			</div>
+			<ul>
+				{ms:arclist typeid=106 size=6}
+				<li><a class="img-auto" href="{ms:global.url/}[field.link/]" target="_blank"><img alt="网站建设" src="{ms:global.host/}[field.litpic/]" /></a><p><a href="{ms:global.url/}[field.link/]" style="color:;" target="_blank" ><font style="color:;">[field.title/]</font></a>
+				</p></li>
+				{/ms:arclist}	
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</div>
+
+	<div class="blank20"></div>
+
+<#include "footer.htm">
+</body>
+</html>

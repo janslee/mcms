@@ -1,0 +1,158 @@
+<script src="{ms:global.host/}/{ms:global.style/}/js/anime.min.js"></script>
+<style>
+	.ml2 {
+		font-weight: 150;
+		font-size: 2.0em;
+		color:  #850404!important;
+	}
+
+	.ml2 .letter {
+		display: inline-block;
+		line-height: 1em;
+
+	}
+</style>
+
+
+<nav class="navbar navbar-default met-nav" role="navigation" style="background:url()no-repeat;background-size: cover;background-position:center;background-color:#ffffff;">
+	<div class="navbar-header">
+		<div class="container dropup">
+			<button type="button" class="navbar-toggle hamburger hamburger-close collapsed" data-target="#navbar-default-collapse" data-toggle="collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="hamburger-bar"></span>
+			</button>
+			<a href="{ms:global.host/}?id=1" class="navbar-brand navbar-logo vertical-align" title="回到首页">
+				<h1 class='hide'>回到首页</h1>
+				<div class="vertical-align-middle"><img src="{ms:global.host/}/{ms:global.style/}/images/logo.jpeg"/>
+					<span class="ml2">绍兴市柯桥区抗癌协会</span>
+
+				</div>
+			</a>
+			<div class="met-langlist  margin-top-10 text-center top-site navbar-right">
+				<div class="inline-block dropup">
+					<ul class="lang-list clearfix">
+						<li>
+							<div class="met-search-body">
+								<form class="page-search-form" id="searchDataForm" action="{ms:global.host/}/cms/1/search.do" method="post">
+									<!--<input type='hidden' name='lang' value='cn' />
+									<input type='hidden' name='class1' value='10001' /> -->
+									<div class="input-search">
+										<button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+										<input type="text" class="form-control" name="basic_title" value="" placeholder="搜索" data-fv-notempty="true" data-fv-message="不能为空">
+									</div>
+								</form>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h2 class='hide'></h2>
+		</div>
+	</div>
+	<div class="collapse navbar-collapse navbar-collapse-toolbar" id="navbar-default-collapse" style="padding:0;">
+		<div class="container">
+			<ul class="nav navbar-nav navlist">
+				<a href="{ms:global.host/}?id=1" class="navbar-brand navbar-logo vertical-align" title="回到首页">
+					<h1 class='hide'>回到首页</h1>
+					<div class="vertical-align-middle"><img src="{ms:global.host/}/{ms:global.style/}/images/logo.jpeg"/>绍兴市柯桥区抗癌协会</div>
+				</a>
+				<li>
+					<a href="{ms:global.host/}?id=1" title="网站首页" class="link dropdown-toggle">网站首页</a>
+				</li>
+				<li class="dropdown margin-left-0">
+					<a class="dropdown-toggle link" data-toggle="dropdown" data-hover="dropdown" href="{ms:global.url/}/53/index.html?id=2" aria-expanded="false" title="关于协会">关于协会<i class="fa fa-caret-down"></i></a>
+					<ul class="dropdown-menu dropdown-menu-right maxNavlist">
+                        {ms:channel typeid=53}
+                            <li>
+                                <a href="{ms:global.url/}[field.typelink/]?id=[field.typeid]" class="nav2list" title="[field.typetitle/]">[field.typetitle/]</a>
+                            </li>
+                        {/ms:channel}
+					</ul>
+				</li>
+				<li class="dropdown margin-left-0">
+                <a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" href="{ms:global.url/}/59/index.html?id=3" aria-expanded="false" title="协会动态">协会动态<i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-menu dropdown-menu-right maxNavlist">
+                    {ms:channel typeid=59}
+                    <li>
+                        <a href="{ms:global.url/}[field.typelink/]?id=3" class="nav2list" title="[field.typetitle/]">[field.typetitle/]</a>
+                    </li>
+                    {/ms:channel}
+                </ul>
+            </li>
+                <li class="dropdown margin-left-0">
+                    <a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" href="{ms:global.url/}/158/index.html?id=3" aria-expanded="false" title="学术活动">学术活动<i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right maxNavlist">
+                        {ms:channel typeid=158}
+                        <li>
+                            <a href="{ms:global.url/}[field.typelink/]?id=3" class="nav2list" title="[field.typetitle/]">[field.typetitle/]</a>
+                        </li>
+                        {/ms:channel}
+                    </ul>
+                </li>
+				<li class="dropdown margin-left-0">
+					<a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" href="{ms:global.url/}/61/index.html?id=4" aria-expanded="false" title="科普宣传">科普宣传<i class="fa fa-caret-down"></i></a>
+					<ul class="dropdown-menu dropdown-menu-right maxNavlist">
+						{ms:channel typeid=61}
+   					 <li>
+							<a href="{ms:global.url/}[field.typelink/]?id=4" class="nav2list" title="[field.typetitle/]">[field.typetitle/]</a>
+						</li>
+						{/ms:channel}
+					</ul>
+				</li>
+
+				<li class="dropdown margin-left-0">
+					<a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" href="{ms:global.url/}/62/index.html?id=6" aria-expanded="false" title="癌症康复">癌症康复<i class="fa fa-caret-down"></i></a>
+					<ul class="dropdown-menu dropdown-menu-right maxNavlist">
+						{ms:channel typeid=62}
+   					 <li>
+							<a href="{ms:global.url/}[field.typelink/]?id=6" class="nav2list" title="[field.typetitle/]">[field.typetitle/]</a>
+						</li>
+						{/ms:channel}
+					</ul>
+				</li>
+				<li class="dropdown margin-left-0">
+					<a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" href="{ms:global.url/}/63/166/index.html?id=7" aria-expanded="false" title="会员中心">会员中心<i class="fa fa-caret-down"></i></a>
+					<ul class="dropdown-menu dropdown-menu-right maxNavlist">
+						{ms:channel orderby=id order=asc typeid=63}
+   					 <li>
+							<a href="{ms:global.url/}[field.typelink/]?id=7" class="nav2list" title="[field.typetitle/]">[field.typetitle/]</a>
+						</li>
+						{/ms:channel}
+					</ul>
+				</li>
+                <li class="dropdown margin-left-0">
+                    <a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" href="{ms:global.url/}/87/index.html?id=7" aria-expanded="false" title="医患互动">医患互动<i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right maxNavlist">
+                        {ms:channel typeid=87}
+                        <li>
+                            <a href="{ms:global.url/}[field.typelink/]?id=8" class="nav2list" title="[field.typetitle/]">[field.typetitle/]</a>
+                        </li>
+                        {/ms:channel}
+                    </ul>
+                </li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script>
+    var textWrapper = document.querySelector('.ml2');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+        .add({
+            targets: '.ml2 .letter',
+            scale: [4,1],
+            opacity: [0,1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 950,
+            delay: (el, i) => 70*i}).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
+
+</script>

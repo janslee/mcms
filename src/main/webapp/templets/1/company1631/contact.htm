@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--调用头部公共文件-->
+<#include "headerFile.htm">
+<!--调用头部结束-->
+</head>
+<body>
+<!--调用头部导航栏-->
+<#include "header.htm">
+<!--调用导航栏结束-->
+<script  type="text/javascript">
+
+$(function(){
+
+	$(window).resize(function(){
+
+		$('.main').height($(window).height()-250);
+
+	}).resize();
+
+	$('.main').backstretch(["{ms:global.host/}/{ms:global.style/}/images/contact_bg.jpg"]);
+
+})
+
+</script>
+<!-- <div  class="main">
+		<div  class="backstretch" ></div>
+</div> -->
+<div  class="in_bg">
+		<div  class="container con">
+				<div  class="contact sub_con">
+						<div  class="title">
+							 当前位置：<a href='{ms:global.host/}'>主页</a> > <a href='{ms:channel type=path}[field.typelink/]{/ms:channel}'>{ms:channel type=path}[field.typetitle/]{/ms:channel}</a>
+						</div>
+						<div  class="content"> <img src="{ms:global.host/}/{ms:global.style/}/images/map.png"  style="width:894px;height:285px"/>
+								<ul class="contact_info cl">
+										<li> QQ ONLINE
+												<p> 00000000</p>
+										</li>
+										<li> ADDRESS:
+												<p> 子虚市乌有区405室</p>
+										</li>
+										<li> WEB
+												<p> www.mingsoft.net</p>
+										</li>
+										<li> T E L:
+												<p> 0871-00000000 / 00000000 / 000000000</p>
+										</li>
+										<li> Email
+												<p> 00000000@qq.com</p>
+										</li>
+										<li> FAX:
+												<p> 0871-0000000</p>
+										</li>
+								</ul>
+						</div>
+				</div>
+		</div>
+		<br>
+		<br>
+		<br>
+</div>
+<!--调用尾部-->
+<#include "footer.htm">
+<!--调用尾部结束-->
+</body>
+</html>

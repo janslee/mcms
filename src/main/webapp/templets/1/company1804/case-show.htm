@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<#include "headFile.htm">
+<body>
+	<#include "head.htm">
+	<div class="blank20"></div>
+	<div class="box2">
+		<div class="box2-left">
+			<!--只展开当前栏目所在一级栏目下的分类-->
+			<div class="left1">
+				<div class="left1_t"></div>
+				<div class="left1-1">
+					<h3>活动动态</h3><span>products</span>
+				</div>
+				<ul>
+					{ms:channel}
+					<li><a title="[field.typetitle/]" href="{ms:global.url/}[field.typelink/]">[field.typetitle/]</a></li>
+					{/ms:channel}	
+				</ul>
+				<div class="left1_b"></div>
+			</div>			
+			<div class="blank20"></div>
+
+			<!--只展开当前栏目所在一级栏目下的分类-->
+			<div class="left2">
+				<div class="title10">
+					<a href="{ms:global.url/}/59/index.html">中央精神</a>
+				</div>
+				<ul class="ul1">
+					{ms:arclist typeid=59 size=7}
+					<li><a style="color:;" href="{ms:global.url/}[field.link/]" title="[field.title/]" target="_blank"><font style="color:;">[field.title/]</font></a></li>
+					{/ms:arclist}	
+				</ul>
+			</div>
+		</div>
+		<div class="box2-right">
+			<div class="title20">
+				<h5>{ms:field.typetitle/}</h5><span>{ms:field.typetitle/}</span>
+			</div>
+			<div class="box2-content">
+				<div class="title21">{ms:field.title/}</div>
+				<div class="title22">作者：<a>{ms:field.author/}</a>&nbsp;&nbsp; 添加时间：{ms:field.date?string("yyyy-MM-dd")/}&nbsp;&nbsp;</div>
+				<div class="w_set">
+					<div class="content">
+						<p class="t_tools pc_show">
+							<a href="javascript:CallPrint('print');">打印本文</a> &nbsp; &nbsp; &nbsp; <a href="javascript:doZoom(14)">小</a>&nbsp; &nbsp;<a href="javascript:doZoom(18)">中</a>&nbsp; &nbsp;<a href="javascript:doZoom(20)">大</a>
+						</p>
+						<!-- 内容说明 -->
+						<p>{ms:field.content/}</p>
+						<div class="blank30"></div>
+						<!-- 上下页开始 -->
+						<div id="page">
+							<strong>上一篇</strong><a href="{ms:global.url/}{ms:pre.link/}">{ms:pre.title/}</a>
+							<div class="blank10"></div>
+							<strong>下一篇</strong><a href="{ms:global.url/}{ms:next.link/}">{ms:next.title/}</a>
+						</div>
+						<!-- 上下页结束 -->
+					</div>
+				</div>
+				<!-- t_1 -->
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="{ms:global.host/}/{ms:global.style/}/js/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="{ms:global.host/}/{ms:global.style/}/js/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="{ms:global.host/}/{ms:global.style/}/css/jquery.fancybox-1.3.4.css" media="screen" />
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="blank20"></div>
+<#include "footer.htm">
+</body>
+</html>

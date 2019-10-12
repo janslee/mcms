@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <#include "head-file.htm"/>
+    </head>
+    <body>
+        <#include "head.htm"/>
+        <div class="container">
+        <div class="met-banner">
+            <img class="cover-image" src="{ms:global.host/}/{ms:global.style/}/images/search.jpg">
+        </div>
+
+            <div class="ms-content" id="body">
+                <div class="ms-content-main-list" id="ms-content-search">
+                    <div class="ms-content-main-div">
+                        <div class="ms-content-main-div-prompt">您搜索的关键字
+                            <span>{ms:search.basic_title/}</span>
+                            <!-- 共7个结果 -->
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <section class="met-news animsition">
+                <div class="container">
+                        <div class="row">
+                            <div class="met-news-list">
+                                <ul class="met-page-ajax" data-scale=''>
+                                    {ms:arclist ispaging=true size=6}
+                                    <li>
+                                        <h4>
+                                            <a class="news-list-a" href="{ms:global.url/}[field.link/]" title="[field.title/]" target='_self'>
+                                                [field.title/] <span>发布日期：[field.date?string("yyyy-MM-dd")/]&nbsp;作者：[field.author/]</span>
+                                            </a>
+                                        </h4>
+                                        <p class="des">[field.descrip/]</p>
+
+                                    </li>
+                                    {/ms:arclist}
+                                </ul>
+                                <div class="hidden-xs">
+                                    <div class='met_pager ms-dis-block'>
+                                        <a class='Ahover' href="{ms:page.index/}">首页</a>
+                                        <a class='Ahover' href="{ms:page.pre/}">上一页</a>
+                                        <a class='NextSpan'>当前：{ms:page.cur/}</a>
+                                        <a class='NextSpan'>总页：{ms:page.total/}</a>
+                                        <a class='Ahover' href="{ms:page.next/}">下一页</a>
+                                        <a class='Ahover' href="{ms:page.last/}">末页</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+
+        <#include "footer.htm"/>
+        </div>
+        </div>
+    </body>
+</html>
+<script>
+new Vue({
+    el: "#body",
+    data: {
+       title: '',
+       list: [],
+    },
+    methods: {
+   	//上下页
+  	search:function(flag){
+  		var pageNo = {ms:search.pageNo/};
+  		var total = {ms:page.total/};
+  		if(flag){
+  			pageNo = pageNo==total ? total : pageNo +1;//下一页
+  		}else{
+  			pageNo = pageNo -1==0 ? 1 : pageNo-1;//上一页
+  		}
+  		window.location.href="{ms:global.host/}/cms/1/search.do?basic_title={ms:search.basic_title/}&pageNo="+pageNo;
+  		window.event.returnValue=false; 
+  	},
+  	//首页和尾页
+  	indexAndLast:function(pageNo){
+  		window.location.href="{ms:global.host/}/cms/1/search.do?basic_title={ms:search.basic_title/}&pageNo="+pageNo;
+  		window.event.returnValue=false; 
+  	},
+    },
+ })
+    if($('.ms-content-main-ul li').length <= 0) {
+        $('.ms-content-main-page').remove();
+        $('.ms-content-main-ul').before("<div class='ms-content-main-div-nothing'>没找到相关记录</div>")
+    }
+</script>

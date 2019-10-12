@@ -1,0 +1,60 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{ms:global.name/}</title>
+<meta name="keywords" content="{ms:global.descrip/}" />
+<meta name="description" content="{ms:global.keyword/}" />
+<meta name="mstore-key" content="5e3150130fd86730dc86eb9cfa0e505a"/>
+<link rel="shortcut icon" href="http://cdn.mingsoft.net/global/images/ms.ico" type="x-icon">
+<link  href="{ms:global.host/}/{ms:global.style/}/css/health_style.css"  rel="stylesheet"  type="text/css">
+<script type="text/javascript">document.domain="mingsoft.net";</script>
+<script  type="text/javascript"  src="{ms:global.host/}/{ms:global.style/}/js/code.js"></script>
+<script  type="text/javascript"  src="{ms:global.host/}/{ms:global.style/}/js/jquery.backstretch.js"></script>
+<script src="http://cdn.mingsoft.net/plugins/jquery/1.9.1/jquery-1.9.1.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- 分享作者: 刘锋 ｜QQ:251156883 关于模版版权: 铭飞MStore（MS商城）中的网站模版由用户自主发布、编辑整理上传，对此类作品本站仅提供交流学习平台。 如果您发现MStore上有侵犯您的知识产权的作品，请与我们取得联系（邮箱：service@ming-soft.com），我们会及时修改或删除。 铭飞平台（MING-SOFT） http://www.mingsoft.net ——————价值源自分享——————— -->
+<script  type="text/javascript"  language="javascript">
+
+    //加入收藏
+
+    function AddFavorite(sURL, sTitle) {
+
+            sURL = encodeURI(sURL);
+
+        try{
+
+            window.external.addFavorite(sURL, sTitle);
+
+        }catch(e) {
+
+            try{
+
+                window.sidebar.addPanel(sTitle, sURL, "/");
+
+            }catch (e) {
+
+                alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+
+            }
+
+        }
+
+    }
+
+    //设为首页
+
+    function SetHome(url){
+
+        if (document.all) {
+
+            document.body.style.behavior='url(/)';
+
+               document.body.setHomePage(url);
+
+        }else{
+
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+
+        }
+
+    }
+
+</script>

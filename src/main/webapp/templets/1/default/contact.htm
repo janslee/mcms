@@ -105,13 +105,13 @@
 							          });
 							          _iw.addEventListener("open",function(){
 							            _marker.getLabel().hide();
-							          })
+							          });
 							          _iw.addEventListener("close",function(){
 							            _marker.getLabel().show();
-							          })
+							          });
 							        label.addEventListener("click",function(){
 							            _marker.openInfoWindow(_iw);
-							          })
+							          });
 							        if(!!json.isOpen){
 							          label.hide();
 							          _marker.openInfoWindow(_iw);
@@ -127,7 +127,7 @@
 							    }
 							    //创建一个Icon
 							    function createIcon(json){
-							        var icon = new BMap.Icon("{ms:global.host/}/{ms:global.style/}/images/img-2.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+							        var icon = new BMap.Icon("{ms:global.host/}/{ms:global.style/}/images/img-2.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
 							        return icon;
 							    }
 							    

@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html>
+<#include "headFile.htm">
+<body>
+	<#include "head.htm">
+	<div class="blank20"></div>
+	<div class="box2">
+		<div class="box2-left">
+			<!--只展开当前栏目所在一级栏目下的分类-->
+			<div class="left1">
+				<div class="left1_t"></div>
+				<div class="left1-1">
+					<h3>新闻栏目</h3><span>news</span>
+				</div>
+				<ul>
+					<li  ><a title="今日推荐" href="{ms:global.url/}/59/index.html">今日推荐</a></li>
+					<li  ><a title="最新" href="{ms:global.url/}/61/index.html">最新</a></li>
+					<li  ><a title="焦点" href="{ms:global.url/}/106/index.html">焦点</a></li>
+				</ul>
+				<div class="left1_b"></div>
+			</div>			
+			<div class="blank20"></div>
+			<!--只展开当前栏目所在一级栏目下的分类-->
+			<div class="left2">
+				<div class="title10">
+					<a href="{ms:global.url/}/59/index.html">中央精神</a>
+				</div>
+				<ul class="ul1">
+				{ms:arclist typeid=59 size=7}
+					<li><a style="color:;" href="{ms:global.url/}[field.link/]" title="[field.title/]" target="_blank"><font style="color:;">[field.title/]</font></a></li>
+				{/ms:arclist}	
+				</ul>
+			</div>
+		</div>
+		<div class="box2-right">
+			<div class="title20">
+				<h5>新闻栏目</h5><span>news</span>
+				<div class="mianbao">
+					当前位置 :
+					<a title="政府网站模板" href="{ms:global.host/}">政府网站模板</a>
+					&gt;&gt;<a title="新闻栏目" href="{ms:global.url/}/59/index.html">新闻栏目</a>
+				</div>
+			</div>
+			<div class="box2-content">
+				<ul class="list_page_1">
+					<!-- 内容列表开始 -->
+					{ms:arclist size=8 ispaging=true}
+					<li>
+						<div class="list_page_date">
+							<h1>[field.date?string("yyyy-mm-dd")/]</h1>
+							<p>[field.date?string("yyyy-mm-dd")/]</p>
+						</div>
+						<div class="li_text">
+							<p><a title="[field.title/]" href="{ms:global.url/}[field.link/]" target="_blank" class="list_page_t">[field.title/]</a></p>
+							<p>[field.descrip/]<a href="{ms:global.url/}[field.link/]" target="_blank">[了解更多]</a></p>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</li>
+					{/ms:arclist}	
+					<!-- 内容列表结束 -->
+				</ul>
+
+				<!-- 内容列表分页开始 -->
+				<div class="blank30"></div>
+				<div class="pages">
+					<span>{ms:page.rcount/}条记录/{ms:page.total/}页</span>
+					<a href="{ms:global.url/}/{ms:page.pre/}">上一页</a>
+					<a href="{ms:global.url/}/{ms:page.next/}">下一页</a>
+				</div><!-- 内容列表分页结束 -->
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+		<!-- 限定图片宽度 -->
+		<script defer>
+			var obj = document.getElementById("content_text").getElementsByTagName("img");
+			for(i=0;i<obj.length;i++){
+				if(obj[i].width>1000){
+					obj[i].width = 1000;
+				}
+			}
+		</script><!-- 限定图片宽度 -->
+	<div class="blank20"></div>
+<#include "footer.htm">
+</body>
+</html>
